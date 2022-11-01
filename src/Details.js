@@ -28,12 +28,14 @@ export function Details() {
 
     return(
         <>
-        <img src={data.strMealThumb}/>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', padding: 100}}>
+        <img  width="400"src={data.strMealThumb}/>
         <h2>Meal: {data.strMeal}</h2>
         <h4>Area: {data.strArea}</h4>
         <h4>Category: {data.strCreativeCommonsConfirmed}</h4>
         <h4>Ingredients: {data.strIngredient1}</h4>
         <h4></h4>
+        </div>
         </>
     )
 }

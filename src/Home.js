@@ -31,15 +31,15 @@ export function Home() {
 
     return(
         <>
-        <div>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent:'center', padding: 20}}>
             <input value={input} onChange={handleChange}/>
             <button onClick={fetchMeal}>SEARCH MEAL </button>
         </div>
 
         <div>
-        {mealList.map(meal => <Link to={`/details/${meal.idMeal}`}> 
-                                <div>
-                                    <img src={meal.strMealThumb}/>
+        {mealList.map(meal => <Link style={{textDecoration: 'none'}} to={`/details/${meal.idMeal}`}> 
+                                <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',padding: 50, }}>
+                                    <img width="400px" src={meal.strMealThumb}/>
                                     <h2>{meal.strMeal}</h2>
                                 </div>
                             </Link> )}
